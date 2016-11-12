@@ -79,6 +79,18 @@ angular.module('app', ['app.controllers', 'ui.router', 'ui.grid', 'ui.grid.pagin
 			controller:"grillaUsuariosCtrl"
 		})
 
+		.state("directivaUsuarios", {
+			url:"/directivaUsuarios",
+			templateUrl: "directivaUsuarios.html",
+			controller:"directivasCtrl"
+		})
+
+		.state("directivaProductos", {
+			url:"/directivaProductos",
+			templateUrl: "directivaProductos.html",
+			controller:"directivasCtrl"
+		})
+
 	//$urlRouterProvider.otherwise("/inicio");
 
 })

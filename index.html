@@ -39,11 +39,14 @@
 	<script src="js/controladores/controlAltaUsuarios.js"></script>
 	<script src="js/controladores/controlModificarUsuarios.js"></script>
 	<script src="js/controladores/controlGrillaUsuarios.js"></script>
+	<script src="js/controladores/controlDirectivas.js"></script>
+	<script src="js/controladores/controlLogout.js"></script>
 	<script src="js/servicios/filtros.js"></script>
 	<script src="js/servicios/serviciosProductos.js"></script>
 	<script src="js/servicios/serviciosUsuarios.js"></script>
 	<script src="js/factories/factoryUsuario.js"></script>
 	<script src="js/factories/factoryRutas.js"></script>
+	<script src="js/directivas/directivas.js"></script>
 	<!--El service siempre lo llamamos despues de los controllers y en el angular.module del mismo no hay que agregar []-->
 
 	
@@ -67,13 +70,16 @@
 	                
 	                <!--INICIA MENU -->
 	                
-	                <div class="collapse navbar-collapse" id="navegacion-fm">
+	                <div class="collapse navbar-collapse" id="navegacion-fm" ng-controller="logoutCtrl">
 	                    <ul class="nav navbar-nav">
 	                        <li ng-if="!userActual.login"><a href="#/log/login">Log In</a></li>
+	                        <li ng-if="userActual.login"><a ng-click="Logout()" class="btn btn-danger btn-sm" style="cursor:pointer;">Log Out</a></li>
 	                        <li ng-if="userActual.login"><a href="#/grillaProductos">Grilla Productos</a></li>
+	                        <li ng-if="userActual.login"><a href="#/directivaProductos">Productos Directiva</a></li>
 	                        <li ng-if="userActual.tipo == 'vendedor' || userActual.tipo == 'administrador'"><a href="#/altaProductos">Alta de Productos</a></li>
 	                        <li ng-if="userActual.tipo == 'administrador'"><a href="#/grillaUsuarios">Grilla Usuarios</a></li>
 	                        <li ng-if="userActual.tipo == 'administrador'"><a href="#/altaUsuarios">Alta de Usuarios</a></li>
+	                        <li ng-if="userActual.tipo == 'administrador'"><a href="#/directivaUsuarios">Usuarios Directiva</a></li>
 	                    </ul>
 	                    
 	                    <!--<form action="" class="navbar-form navbar-right" role="search">
