@@ -1,0 +1,64 @@
+<head>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+  <form id="FormIngreso" name="FormIngreso" enctype="multipart/form-data">
+      
+        <h1>Registrarse</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Info Basica</legend>
+          <label for="nombre">Nombre:
+          <input type="text" id="nombre" name="nombre" ng-model="cliente.nombre" placeholder="ingrese nombre" value="" required />
+          <span id="lblNombre" style="color:#FF0000;float:right;font-size:18" ng-show='FormIngreso.nombre.$error.required'>* El nombre es requerido</span></label>
+
+
+          <br><label for="telefono">Telefono:
+          <input type="number" id="telefono" name="telefono" ng-model="cliente.telefono" placeholder="ingrese telefono" value="" required />
+          <span id="lblTelefono" style="color:#FF0000;float:right;font-size:18" ng-show='FormIngreso.telefono.$error.required'>* El Telefono es requerido</span></label>
+        </fieldset>
+
+        <fieldset>
+          <legend><span class="number">2</span>Tu perfil</legend>
+        </fieldset>
+
+        <fieldset>
+
+          <label for="mail">Email:</label>
+          <input type="email" id="email" name="email" ng-model="cliente.email" placeholder="ingrese email" value=""  required>
+          <span id="lblEmail" style="color:#FF0000;float:right;font-size:18" ng-show='FormIngreso.email.$error.required'>* El email es requerido</span>
+          <span style="color:#FF0000;float:right;font-size:18" ng-show='FormIngreso.email.$error.email'>* El formato no es de un email</span>
+          
+          <br><br><br><label for="password1">Password:</label>
+          <input type="password" id="clave1" name="clave1" ng-model="cliente.clave" style="color:#000;" placeholder="Ingrese clave" required>
+          <span id="lblClave1" style="color:#FF0000;float:right;font-size:18" ng-show='FormIngreso.clave1.$error.required'>* La clave es requerida</span>
+
+          <br><br><label for="password2">Confirmar Password:</label>
+          <input type="password" id="clave2" name="clave2" ng-model="cliente.copiaclave" style="color:#000;" placeholder="Reingrese clave" required>
+          <span id="lblClave2" style="color:#FF0000;float:right;font-size:18" ng-show='FormIngreso.clave2.$error.required'>* La clave es requerida</span><br>
+          <br><span style="color:#FF0000;float:right;font-size:18;margin-left:200" ng-show='cliente.password != cliente.copiapassword'>* Las claves no coinciden</span>
+        </fieldset> 
+
+        <button ng-disabled="FormIngreso.$invalid || cliente.password != cliente.copiapassword" name="guardar" ng-click="Guardar()" href="#ventanaOk" data-toggle="modal">Registrarse</button>
+
+
+        <!-- Ventana emergente Registro Correcto -->
+
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="ventanaOk">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h4 class="modal-title">Registro exitoso!</h4>
+              </div>
+              <div class="modal-body">
+                <p>Felicitaciones y muchas gracias por unirte a la comunidad de pizzerias argenta... Para comenzar a operar logueate al sistema con el email y password ingresado en el formulario de registro.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" ng-click="Loguearme()">Aceptar</button>
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+  </form>

@@ -1,0 +1,152 @@
+/* -- HEADER -- */
+
+.navbar{
+    margin-bottom: 0;
+}
+
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #f8f8f8;
+    background: url(../img/intro-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 5em;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+@media(max-width:767px) {
+    .intro-message {
+        padding-bottom: 15%;
+    }
+
+    .intro-message > h1 {
+        font-size: 3em;
+    }
+
+    ul.intro-social-buttons > li {
+        display: block;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+
+    ul.intro-social-buttons > li:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-divider {
+        width: 100%;
+    }
+}
+
+
+
+/* -- POST -- */
+
+.main{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.post{
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #999;
+}
+
+.post .post-title a{
+    color:#333;
+}
+
+.post .thumb{
+    margin-right: 10px;
+    width:40%;
+}
+
+.post .thumb img{
+    width: 100%;
+}
+
+.post .contenedor-botones{
+    width:100%;
+}
+
+#info{
+    width: 100%;
+    background-color: #333;
+    padding: 20px;
+    color:#FFF;
+    text-align: center;
+}
+
+#info .row img{
+    width:180px;
+    height: 180px;
+    border-radius: 50%;
+    border:7px solid #FFF;
+}
+
+.info-pet{
+    margin:15px;
+}
+
+.boton-alta-persona{
+    width:100%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.inicio-juegos{
+background: #ff3019; /* Old browsers */
+background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #ff3019 0%,#cf0404 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #ff3019 0%,#cf0404 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+font-family: 'Roboto', sans-serif;
+height:100%;
+margin-top:-20px;
+color:#FFF;
+}
+
+.inicio-juegos-parrafo{
+    text-align: center;
+}
+
+.boton-juegos{
+    width:100%;
+    text-align: center;
+    font-size: 1.5em;
+    margin:50px 0px;
+}
+
+
+/* -- Media Query --*/
+
+@media (max-width:768px){
+    .post .thumb{
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0;
+    }
+}
